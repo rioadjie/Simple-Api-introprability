@@ -19,6 +19,8 @@ class ProdukResource extends JsonResource
             'kode_produk' => $this->kode_produk,
             'nama_produk' => $this->kode_produk,
             'harga' => $this->harga,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
             ];
             
     }

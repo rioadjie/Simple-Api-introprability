@@ -18,6 +18,7 @@ class CreateProduksTable extends Migration
             $table->string('kode_produk');
             $table->string('nama_produk');
             $table->integer('harga');
+            $table->timestamps();
         });
     }
 
