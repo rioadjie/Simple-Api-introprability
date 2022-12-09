@@ -15,11 +15,13 @@ class ProdukController extends Controller
  *
  * @return \Illuminate\Http\Response
  */
+
  public function index()
  {
+ $code = 200;
+ $status = true;
  $data = Produk::latest()->get();
- return response()->json([ProdukResource::collection($data), 
-'Programs fetched.']);
+ return response()->json([ 'kode : ' . $code , 'status : ' . $status, 'data : ',ProdukResource::collection($data)]);
  }
  /**
  * Store a newly created resource in storage.
@@ -44,7 +46,8 @@ public function store(Request $request)
     'harga' => $request->harga
  ]);
 
- return response()->json(['Produk created successfully.', new
+
+ return response()->json([ 'Produk created successfully.', new
 ProdukResource($produk)]);
  }
  /**
